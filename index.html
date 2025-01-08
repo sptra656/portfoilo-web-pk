@@ -1,0 +1,2231 @@
+<!DOCTYPE html>
+
+<!-- This code was generated using AnimaApp.com. 
+This code is a high-fidelity prototype.
+Get developer-friendly React or HTML/CSS code for this project at: https://projects.animaapp.com?utm_source=hosted-code 
+08/01/2025 13:48:05 -->
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1442, maximum-scale=1.0" />
+    <link rel="shortcut icon" type="image/png" href="https://animaproject.s3.amazonaws.com/home/favicon.png" />
+    <meta name="og:type" content="website" />
+    <meta name="twitter:card" content="photo" />
+    <script id="anima-load-script" src="load.js"></script>
+    <script id="anima-hotspots-script" src="hotspots.js"></script>
+    <script id="anima-overrides-script" src="overrides.js"></script>
+    <script src="https://animaapp.s3.amazonaws.com/js/timeline.js"></script>
+    <style>
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+      @import url("https://fonts.googleapis.com/css?family=Poppins:400,700,600");
+
+      /* The following line is used to measure usage of this code. You can remove it if you want. */
+      @import url("https://px.animaapp.com/677b6c06f29796bc7fd30892.677b6c07f29796bc7fd30895.S2sBUm6.hch.png");
+
+      .screen textarea:focus,
+      .screen input:focus {
+        outline: none;
+      }
+
+      .screen * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+      }
+
+      .screen div {
+        -webkit-text-size-adjust: none;
+      }
+
+      .component-wrapper a {
+        display: contents;
+        pointer-events: auto;
+        text-decoration: none;
+      }
+
+      .component-wrapper * {
+        -webkit-font-smoothing: antialiased;
+        box-sizing: border-box;
+        pointer-events: none;
+      }
+
+      .component-wrapper a *,
+      .component-wrapper input,
+      .component-wrapper video,
+      .component-wrapper iframe {
+        pointer-events: auto;
+      }
+
+      .component-wrapper.not-ready,
+      .component-wrapper.not-ready * {
+        visibility: hidden !important;
+      }
+
+      .screen a {
+        display: contents;
+        text-decoration: none;
+      }
+
+      .full-width-a {
+        width: 100%;
+      }
+
+      .full-height-a {
+        height: 100%;
+      }
+
+      .container-center-vertical {
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      .container-center-vertical > * {
+        flex-shrink: 0;
+        pointer-events: auto;
+      }
+
+      .container-center-horizontal {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        pointer-events: none;
+        width: 100%;
+      }
+
+      .container-center-horizontal > * {
+        flex-shrink: 0;
+        pointer-events: auto;
+      }
+
+      .auto-animated div {
+        --z-index: -1;
+        opacity: 0;
+        position: absolute;
+      }
+
+      .auto-animated input {
+        --z-index: -1;
+        opacity: 0;
+        position: absolute;
+      }
+
+      .auto-animated .container-center-vertical,
+      .auto-animated .container-center-horizontal {
+        opacity: 1;
+      }
+
+      .overlay-base {
+        display: none;
+        height: 100%;
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+
+      .overlay-base.animate-appear {
+        align-items: center;
+        animation: reveal 0.3s ease-in-out 1 normal forwards;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+      }
+
+      .overlay-base.animate-disappear {
+        animation: reveal 0.3s ease-in-out 1 reverse forwards;
+        display: block;
+        opacity: 1;
+        pointer-events: none;
+      }
+
+      .overlay-base.animate-disappear * {
+        pointer-events: none;
+      }
+
+      @keyframes reveal {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .animate-nodelay {
+        animation-delay: 0s;
+      }
+
+      .align-self-flex-start {
+        align-self: flex-start;
+      }
+
+      .align-self-flex-end {
+        align-self: flex-end;
+      }
+
+      .align-self-flex-center {
+        align-self: flex-center;
+      }
+
+      .valign-text-middle {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .valign-text-bottom {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      .listeners-active,
+      .listeners-active * {
+        pointer-events: auto;
+      }
+
+      .hidden,
+      .hidden * {
+        pointer-events: none;
+        visibility: hidden;
+      }
+
+      .smart-layers-pointers,
+      .smart-layers-pointers * {
+        pointer-events: auto;
+        visibility: visible;
+      }
+
+      .listeners-active-click,
+      .listeners-active-click * {
+        cursor: pointer;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        --black: #000000;
+        --black-haze: #f7f7f7;
+        --blaze-orange: #fd6f00;
+        --cararra: #ecebeb;
+        --eerie-black: #1e1e1e;
+        --fuscous-gray: #535353;
+        --mystic: #e4e7ec;
+        --white: #ffffff;
+
+        --font-size-l: 24px;
+        --font-size-m: 21px;
+        --font-size-s: 19px;
+        --font-size-xl: 32px;
+        --font-size-xs: 18.2px;
+        --font-size-xxl: 60px;
+        --font-size-xxxl: 65px;
+
+        --font-family-poppins: "Poppins", Helvetica;
+      }
+      .nav-bar-text-21 {
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-m);
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.63px;
+      }
+
+      .small-heading-24 {
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-l);
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 0.72px;
+      }
+
+      .h2-65 {
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxxl);
+        font-style: normal;
+        font-weight: 600;
+        letter-spacing: 1.95px;
+      }
+
+      .x24-r {
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-l);
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.72px;
+      }
+
+      .sub-p-19 {
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-s);
+        font-style: normal;
+        font-weight: 400;
+        letter-spacing: 0.57px;
+      }
+
+      .sub-heading-24 {
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-l);
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.72px;
+      }
+
+      .poppins-normal-black-18-2px {
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xs);
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      :root {
+      }
+
+      /* screen - landing-page */
+
+      .landing-page {
+        align-items: center;
+        background-color: var(--white);
+        display: flex;
+        flex-direction: column;
+        gap: 112px;
+        height: 4543px;
+        left: 0px;
+        overflow: hidden;
+        position: relative;
+        top: 0px;
+        width: 1442px;
+      }
+
+      .landing-page .about-me-0MUxxh {
+        height: 179px;
+        width: 1420px;
+      }
+
+      .landing-page .group-13-yukGTq {
+        background-color: transparent;
+        height: 66px;
+        left: 525px;
+        position: relative;
+        top: 56px;
+        width: 823px;
+      }
+
+      .landing-page .frame-3-XUIqv5 {
+        align-items: flex-start;
+        background-color: transparent;
+        display: flex;
+        gap: 12px;
+        height: 22px;
+        left: 0px;
+        position: absolute;
+        top: 7px;
+        width: 592px;
+      }
+
+      .landing-page .frame-1-RZQuVU {
+        background-color: var(--white);
+        gap: 10px;
+        margin-bottom: -29.64px;
+        padding: 10px 14px;
+      }
+
+      .landing-page .home-w01UMm {
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        margin-top: -1px;
+      }
+
+      .landing-page .frame-2-RZQuVU {
+        background-color: var(--white);
+        gap: 10px;
+        margin-bottom: -29.64px;
+        padding: 10px 14px;
+      }
+
+      .landing-page .about-me-5MDUJU {
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -1px;
+        text-align: left;
+        width: fit-content;
+      }
+
+      .landing-page .frame-3-RZQuVU {
+        align-items: flex-start;
+        background-color: var(--white);
+        display: inline-flex;
+        flex: 0 0 auto;
+        gap: 10px;
+        margin-bottom: -29.64px;
+        padding: 10px 14px;
+        position: relative;
+      }
+
+      .landing-page .services-I38gq7 {
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -1px;
+        text-align: left;
+        width: fit-content;
+      }
+
+      .landing-page .frame-4-RZQuVU {
+        background-color: var(--white);
+        gap: 10px;
+        margin-bottom: -29.64px;
+        padding: 10px 14px;
+      }
+
+      .landing-page .projects-L1XvDT {
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        margin-top: -1px;
+      }
+
+      .landing-page .frame-6-RZQuVU {
+        background-color: var(--white);
+        gap: 10px;
+        margin-bottom: -29.64px;
+        margin-right: -34.71px;
+        padding: 10px 14px;
+      }
+
+      .landing-page .contact-SqPsL4 {
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        margin-top: -1px;
+      }
+
+      .landing-page .group-3-XUIqv5 {
+        background-color: transparent;
+        height: 66px;
+        left: 639px;
+        position: absolute;
+        top: 0px;
+        width: 186px;
+      }
+
+      .landing-page .rectangle-1-8pf0fs {
+        background-color: var(--blaze-orange);
+        border-radius: 5px;
+        height: 66px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 184px;
+      }
+
+      .landing-page .contact-me-8pf0fs {
+        background-color: transparent;
+        color: var(--white);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 18px;
+        line-height: normal;
+        position: absolute;
+        text-align: justify;
+        top: 29px;
+        white-space: nowrap;
+        width: 148px;
+      }
+
+      .landing-page .frame-27-0MUxxh {
+        background-color: transparent;
+        height: 686.4752197265625px;
+        position: relative;
+        width: 1400px;
+      }
+
+      .landing-page .header-CBjmET {
+        background-color: transparent;
+        height: 617px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 1400px;
+      }
+
+      .landing-page .group-6-7A88Cc {
+        background-color: transparent;
+        height: 617px;
+        left: 0px;
+        position: relative;
+        top: 0px;
+        width: 1402px;
+      }
+
+      .landing-page .group-5-CH45hr {
+        background-color: transparent;
+        height: 244px;
+        left: 0px;
+        position: absolute;
+        top: 97px;
+        width: 816px;
+      }
+
+      .landing-page .hi-i-am-j2UDMV {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        left: 7px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: auto;
+      }
+
+      .landing-page .fandy-muhammad-saputra-j2UDMV {
+        background-color: transparent;
+        color: var(--blaze-orange);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xl);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        left: 4px;
+        letter-spacing: 0.96px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 42px;
+        width: auto;
+      }
+
+      .landing-page .student-at-yogyakarta-j2UDMV {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 700;
+        height: auto;
+        left: 0px;
+        letter-spacing: 1.8px;
+        line-height: 72px;
+        position: absolute;
+        text-align: left;
+        top: 93px;
+        white-space: nowrap;
+        width: auto;
+      }
+
+      .landing-page .university-of-technology-j2UDMV {
+        background-color: transparent;
+        color: var(--black);
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xxl);
+        font-style: normal;
+        font-weight: 700;
+        height: auto;
+        left: 3px;
+        letter-spacing: 1.8px;
+        line-height: 72px;
+        position: absolute;
+        text-align: left;
+        top: 172px;
+        white-space: nowrap;
+        width: auto;
+      }
+
+      .landing-page .saya-menempuh-pendid-CH45hr {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 7px;
+        line-height: normal;
+        position: absolute;
+        text-align: justify;
+        top: 350px;
+        width: 698px;
+      }
+
+      .landing-page .group-2-CH45hr {
+        background-color: transparent;
+        height: 617px;
+        left: 862px;
+        position: absolute;
+        top: 0px;
+        width: 538px;
+      }
+
+      .landing-page .ellipse-4-xxLoVa {
+        height: 486px;
+        left: 16px;
+        top: 131px;
+        width: 486px;
+      }
+
+      .landing-page .mask-group-xxLoVa {
+        height: 486px;
+        left: 16px;
+        top: 131px;
+        width: 486px;
+      }
+
+      .landing-page .layer-0-copy-4-xxLoVa {
+        background-color: transparent;
+        height: 352px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 538px;
+      }
+
+      .landing-page .group-39-CBjmET {
+        background-color: transparent;
+        height: 27px;
+        left: 1018px;
+        position: absolute;
+        top: 654px;
+        width: 197px;
+      }
+
+      .landing-page .linked-in-negative-GCQvmx {
+        left: 173px;
+        top: -0px;
+      }
+
+      .landing-page .instagram-negative-GCQvmx {
+        left: 115px;
+        top: -0px;
+      }
+
+      .landing-page .twitter-negative-GCQvmx {
+        left: 58px;
+        top: -0px;
+      }
+
+      .landing-page .nav-bar-0MUxxh {
+        align-self: stretch;
+        background-color: transparent;
+        height: 675px;
+        position: relative;
+        width: 100%;
+      }
+
+      .landing-page .group-11-U4NVqU {
+        background-color: transparent;
+        height: 632px;
+        left: 67px;
+        position: relative;
+        top: 55px;
+        width: 1365px;
+      }
+
+      .landing-page .group-7-DxsQQQ {
+        background-color: transparent;
+        height: 554px;
+        left: 0px;
+        position: absolute;
+        top: 72px;
+        width: 546px;
+      }
+
+      .landing-page .ellipse-4-XWgLsO {
+        height: 554px;
+        left: 0px;
+        top: 0px;
+        width: 546px;
+      }
+
+      .landing-page .mask-group-XWgLsO {
+        height: 546px;
+        left: 0px;
+        top: 2px;
+        width: 546px;
+      }
+
+      .landing-page .saya-adalah-mahasisw-DxsQQQ {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 605px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 98px;
+        width: 756px;
+      }
+
+      .landing-page .title-DxsQQQ {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        left: 601px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 0px;
+        width: auto;
+      }
+
+      .landing-page .group-10-DxsQQQ {
+        background-color: transparent;
+        height: 349px;
+        left: 601px;
+        position: absolute;
+        top: 283px;
+        width: 759px;
+      }
+
+      .landing-page .group-9-omzMxC {
+        background-color: transparent;
+        height: 76px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 755px;
+      }
+
+      .landing-page .pemahaman-dasar-pemrograman-AFuhdn {
+        text-align: left;
+        top: 0px;
+      }
+
+      .landing-page .group-8-AFuhdn {
+        top: 44px;
+      }
+
+      .landing-page .rectangle-5-OWQsx7 {
+        top: 10px;
+      }
+
+      .landing-page .rectangle-6-OWQsx7 {
+        top: 10px;
+        width: 687px;
+      }
+
+      .landing-page .ellipse-9-OWQsx7 {
+        left: 669px;
+        top: 0px;
+      }
+
+      .landing-page .penggunaan-tools-omzMxC {
+        left: 0px;
+        top: 91px;
+      }
+
+      .landing-page .rectangle-5-omzMxC {
+        top: 145px;
+      }
+
+      .landing-page .rectangle-6-omzMxC {
+        top: 145px;
+        width: 657px;
+      }
+
+      .landing-page .ellipse-9-omzMxC {
+        left: 637px;
+        top: 135px;
+      }
+
+      .landing-page .struktur-data-dan-algoritma-omzMxC {
+        left: 0px;
+        top: 182px;
+      }
+
+      .landing-page .rectangle-5-OWFLuI {
+        top: 236px;
+      }
+
+      .landing-page .rectangle-6-OWFLuI {
+        top: 236px;
+        width: 721px;
+      }
+
+      .landing-page .ellipse-9-OWFLuI {
+        left: 701px;
+        top: 226px;
+      }
+
+      .landing-page .pemahaman-dasar-pemrograman-web-omzMxC {
+        left: 0px;
+        top: 273px;
+      }
+
+      .landing-page .group-8-omzMxC {
+        top: 317px;
+      }
+
+      .landing-page .rectangle-5-zb7VLx {
+        top: 10px;
+      }
+
+      .landing-page .rectangle-6-zb7VLx {
+        top: 10px;
+        width: 687px;
+      }
+
+      .landing-page .ellipse-9-zb7VLx {
+        left: 669px;
+        top: 0px;
+      }
+
+      .landing-page .services-0MUxxh {
+        height: 584px;
+        width: 1413px;
+      }
+
+      .landing-page .group-22-2Ne45x {
+        background-color: transparent;
+        height: 657px;
+        left: -42px;
+        position: relative;
+        top: 0px;
+        width: 1455px;
+      }
+
+      .landing-page .group-14-Jeu3vn {
+        background-color: transparent;
+        height: 214px;
+        left: 281px;
+        position: absolute;
+        top: 0px;
+        width: 936px;
+      }
+
+      .landing-page .keterampilan-yang-sa-YidIon {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 113px;
+        width: 932px;
+      }
+
+      .landing-page .skills-YidIon {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        left: 377px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: auto;
+      }
+
+      .landing-page .group-21-Jeu3vn {
+        background-color: transparent;
+        height: 419px;
+        left: 0px;
+        position: absolute;
+        top: 238px;
+        width: 1467px;
+      }
+
+      .landing-page .group-20-nbuHYU {
+        background-color: transparent;
+        height: 419px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 372px;
+      }
+
+      .landing-page .rectangle-20-VR7ab6 {
+        background-color: #e4e6eb;
+        left: 42px;
+      }
+
+      .landing-page .group-19-VR7ab6 {
+        background-color: transparent;
+        height: 362px;
+        left: 0px;
+        position: absolute;
+        top: 57px;
+        width: 358px;
+      }
+
+      .landing-page .pemahaman-dasar-pemrograman-iE0OS0 {
+        text-align: center;
+        top: 85px;
+      }
+
+      .landing-page .kemampuan-untuk-mema-iE0OS0 {
+        left: 64px;
+        top: 159px;
+      }
+
+      .landing-page .vector-iE0OS0 {
+        height: 70px;
+        left: 60px;
+        top: 0px;
+        width: 70px;
+      }
+
+      .landing-page .vector-KEtfcJ {
+        height: 3px;
+        left: 116px;
+        top: 24px;
+        width: 3px;
+      }
+
+      .landing-page .vector-xwFdeX {
+        height: 9px;
+        left: 67px;
+        top: 20px;
+        width: 12px;
+      }
+
+      .landing-page .vector-LNSnzW {
+        height: 3px;
+        left: 83px;
+        top: 20px;
+        width: 17px;
+      }
+
+      .landing-page .vector-h2LxmK {
+        height: 3px;
+        left: 83px;
+        top: 27px;
+        width: 17px;
+      }
+
+      .landing-page .vector-z7cOBb {
+        height: 9px;
+        left: 90px;
+        top: 47px;
+        width: 12px;
+      }
+
+      .landing-page .vector-7v5eoS {
+        height: 3px;
+        left: 106px;
+        top: 47px;
+        width: 17px;
+      }
+
+      .landing-page .vector-uiCOeb {
+        height: 3px;
+        left: 106px;
+        top: 53px;
+        width: 17px;
+      }
+
+      .landing-page .rectangle-20-nbuHYU {
+        background-color: var(--mystic);
+        left: 403px;
+      }
+
+      .landing-page .penggunaan-tools-nbuHYU {
+        left: 421px;
+        top: 142px;
+      }
+
+      .landing-page .kemampuan-untuk-mema-nbuHYU {
+        left: 425px;
+        top: 216px;
+      }
+
+      .landing-page .rectangle-20-mU1tkK {
+        background-color: var(--mystic);
+        left: 764px;
+      }
+
+      .landing-page .struktur-data-dan-algoritma-nbuHYU {
+        left: 782px;
+        top: 142px;
+      }
+
+      .landing-page .dua-konsep-penting-d-nbuHYU {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 786px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 216px;
+        width: 290px;
+      }
+
+      .landing-page .rectangle-20-CIDUxd {
+        background-color: var(--mystic);
+        left: 1125px;
+      }
+
+      .landing-page .pemahaman-dasar-pemrograman-web-nbuHYU {
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-l);
+        left: 1143px;
+        letter-spacing: 0.96px;
+        top: 142px;
+      }
+
+      .landing-page .penguasaan-konsep-te-nbuHYU {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 1147px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 216px;
+        width: 290px;
+      }
+
+      .landing-page .layer_1-nbuHYU {
+        background-color: transparent;
+        height: 82px;
+        left: 421px;
+        position: absolute;
+        top: 54px;
+        width: 72px;
+      }
+
+      .landing-page .group-18-nbuHYU {
+        background-color: transparent;
+        height: 82px;
+        left: 786px;
+        position: absolute;
+        top: 51px;
+        width: 47px;
+      }
+
+      .landing-page .vector-nbuHYU {
+        height: 70px;
+        left: 1143px;
+        top: 57px;
+        width: 82px;
+      }
+
+      .landing-page .vector-mU1tkK {
+        height: 10px;
+        left: 1163px;
+        top: 64px;
+        width: 10px;
+      }
+
+      .landing-page .vector-CIDUxd {
+        height: 10px;
+        left: 1150px;
+        top: 64px;
+        width: 10px;
+      }
+
+      .landing-page .vector-6W2zi8 {
+        height: 10px;
+        left: 1176px;
+        top: 64px;
+        width: 10px;
+      }
+
+      .landing-page .vector-t3wqGs {
+        height: 3px;
+        left: 1182px;
+        top: 93px;
+        width: 3px;
+      }
+
+      .landing-page .frame-21-0MUxxh {
+        background-color: transparent;
+        height: 1020px;
+        position: relative;
+        width: 1423px;
+      }
+
+      .landing-page .projek-kecil-yang-su-3k9vQ0 {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 249px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 119px;
+        width: 921px;
+      }
+
+      .landing-page .my-projects-3k9vQ0 {
+        background-color: transparent;
+        color: var(--eerie-black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        left: 510px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: -1px;
+        width: auto;
+      }
+
+      .landing-page .group-28-3k9vQ0 {
+        background-color: transparent;
+        height: 56px;
+        left: 362px;
+        position: absolute;
+        top: 267px;
+        width: 813px;
+      }
+
+      .landing-page .frame-23-Hwesv3 {
+        left: 0px;
+        top: 0px;
+      }
+
+      .landing-page .apps-kalkulator-xL5dxn {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -0.4px;
+        position: relative;
+        text-align: center;
+        width: fit-content;
+      }
+
+      .landing-page .frame-18-Hwesv3 {
+        align-items: flex-start;
+        background-color: var(--blaze-orange);
+        border: 0.4000000059604645px solid;
+        border-color: var(--fuscous-gray);
+        border-radius: 12px;
+        display: inline-flex;
+        gap: 10px;
+        left: 267px;
+        padding: 10px 20px;
+        position: absolute;
+        top: 0px;
+      }
+
+      .landing-page .web-ecommerce-1c53aD {
+        background-color: transparent;
+        color: var(--white);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -0.4px;
+        position: relative;
+        text-align: center;
+        width: fit-content;
+      }
+
+      .landing-page .frame-19-Hwesv3 {
+        align-items: flex-start;
+        background-color: var(--black-haze);
+        border: 0.4000000059604645px solid;
+        border-color: var(--fuscous-gray);
+        border-radius: 12px;
+        display: inline-flex;
+        gap: 10px;
+        left: 552px;
+        padding: 10px 20px;
+        position: absolute;
+        top: 0px;
+      }
+
+      .landing-page .web-administrasi-mVcO2M {
+        color: var(--black);
+        font-weight: 400;
+        margin-top: -0.4px;
+        position: relative;
+        text-align: center;
+        width: fit-content;
+      }
+
+      .landing-page .frame-23-3k9vQ0 {
+        left: 266px;
+        top: 267px;
+      }
+
+      .landing-page .all-TkYxM0 {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: -0.4px;
+        position: relative;
+        text-align: center;
+        width: fit-content;
+      }
+
+      .landing-page .group-25-3k9vQ0 {
+        background-color: transparent;
+        height: 601px;
+        left: 0px;
+        position: absolute;
+        top: 419px;
+        width: 449px;
+      }
+
+      .landing-page .group-24-0Kxpxm {
+        background-color: transparent;
+        height: 489px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 445px;
+      }
+
+      .landing-page .rectangle-24-TQ5Fxo {
+        background-color: #ffeada;
+        border-radius: 12px;
+        height: 489px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 445px;
+      }
+
+      .landing-page .web-designs-TQ5Fxo {
+        height: 469px;
+        left: 159px;
+        top: 20px;
+        width: 259px;
+      }
+
+      .landing-page .web-designs-mtKUCT {
+        height: 398px;
+        left: 68px;
+        top: 91px;
+        width: 221px;
+      }
+
+      .landing-page .app-desain-0Kxpxm {
+        background-color: transparent;
+        color: var(--blaze-orange);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 148px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 526px;
+        width: auto;
+      }
+
+      .landing-page .apps-kalkulator-sederhana-0Kxpxm {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 700;
+        height: auto;
+        left: 44px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 565px;
+        width: auto;
+      }
+
+      .landing-page .group-26-3k9vQ0 {
+        background-color: transparent;
+        height: 601px;
+        left: 489px;
+        position: absolute;
+        top: 419px;
+        width: 449px;
+      }
+
+      .landing-page .rectangle-27-hMPqQu {
+        background-color: #ffebdb;
+        border-radius: 12px;
+        height: 489px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 445px;
+      }
+
+      .landing-page .web-design-hMPqQu {
+        left: 140px;
+      }
+
+      .landing-page .web-e-commerce-hMPqQu {
+        background-color: transparent;
+        color: var(--eerie-black);
+        font-style: normal;
+        font-weight: 700;
+        height: auto;
+        left: 80px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 565px;
+        width: auto;
+      }
+
+      .landing-page .group-27-3k9vQ0 {
+        background-color: transparent;
+        height: 601px;
+        left: 978px;
+        position: absolute;
+        top: 419px;
+        width: 449px;
+      }
+
+      .landing-page .rectangle-28-RCG3IO {
+        background-color: #ffebdb;
+        border-radius: 12px;
+        height: 489px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 445px;
+      }
+
+      .landing-page .web-designs-RCG3IO {
+        height: 456px;
+        left: 144px;
+        top: 33px;
+        width: 274px;
+      }
+
+      .landing-page .web-designs-qzAaVI {
+        height: 398px;
+        left: 59px;
+        top: 91px;
+        width: 274px;
+      }
+
+      .landing-page .web-design-RCG3IO {
+        left: 136px;
+      }
+
+      .landing-page .web-administrasi-RCG3IO {
+        color: var(--eerie-black);
+        font-weight: 700;
+        height: auto;
+        left: 80px;
+        position: absolute;
+        text-align: left;
+        top: 565px;
+        width: auto;
+      }
+
+      .landing-page .web-designs-3k9vQ0 {
+        height: 456px;
+        left: 629px;
+        top: 452px;
+        width: 280px;
+      }
+
+      .landing-page .frame-25-0MUxxh {
+        background-color: transparent;
+        height: 337px;
+        position: relative;
+        width: 932px;
+      }
+
+      .landing-page .group-36-O4ED4B {
+        background-color: transparent;
+        height: 214px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 936px;
+      }
+
+      .landing-page .jika-ada-yang-bisa-d-eDjDJC {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 0px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 113px;
+        width: 932px;
+      }
+
+      .landing-page .lets-design-together-eDjDJC {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        left: 104px;
+        line-height: normal;
+        position: absolute;
+        text-align: center;
+        top: 0px;
+        width: auto;
+      }
+
+      .landing-page .group-37-O4ED4B {
+        background-color: transparent;
+        cursor: pointer;
+        height: 75px;
+        left: 29px;
+        pointer-events: auto;
+        position: absolute;
+        top: 262px;
+        transition: all 0.2s ease;
+        width: 874px;
+      }
+
+      .landing-page .group-37-O4ED4B:hover {
+        transform: scale(1.1);
+      }
+
+      .landing-page .frame-26-0MUxxh {
+        align-self: stretch;
+        background-color: transparent;
+        height: 391px;
+        position: relative;
+        width: 100%;
+      }
+
+      .landing-page .rectangle-39-CKiNgZ {
+        background-color: var(--mystic);
+        height: 390px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 1449px;
+      }
+
+      .landing-page .rectangle-40-CKiNgZ {
+        background-color: var(--fuscous-gray);
+        height: 103px;
+        left: 0px;
+        position: absolute;
+        top: 288px;
+        width: 1449px;
+      }
+
+      .landing-page .frame-3-CKiNgZ {
+        align-items: flex-start;
+        background-color: transparent;
+        display: flex;
+        gap: 10.417596817016602px;
+        height: 44px;
+        left: 445px;
+        position: absolute;
+        top: 96px;
+        width: 533px;
+      }
+
+      .landing-page .frame-1-mF2B5a {
+        background-color: transparent;
+        gap: 8.681330680847168px;
+        margin-bottom: -0.36px;
+        padding: 8.681330680847168px 12.153862953186035px;
+      }
+
+      .landing-page .home-AbciDU {
+        letter-spacing: 0.55px;
+        margin-top: -0.87px;
+      }
+
+      .landing-page .frame-2-mF2B5a {
+        background-color: transparent;
+        gap: 8.681330680847168px;
+        margin-bottom: -0.36px;
+        padding: 8.681330680847168px 12.153862953186035px;
+      }
+
+      .landing-page .about-me-l4HxUx {
+        letter-spacing: 0.55px;
+        line-height: normal;
+        margin-top: -0.87px;
+        text-align: left;
+        width: fit-content;
+      }
+
+      .landing-page .frame-3-mF2B5a {
+        align-items: flex-start;
+        background-color: transparent;
+        display: inline-flex;
+        flex: 0 0 auto;
+        gap: 8.681330680847168px;
+        margin-bottom: -0.36px;
+        padding: 8.681330680847168px 12.153862953186035px;
+        position: relative;
+      }
+
+      .landing-page .services-CEMrLO {
+        letter-spacing: 0.55px;
+        line-height: normal;
+        margin-top: -0.87px;
+        text-align: left;
+        width: fit-content;
+      }
+
+      .landing-page .frame-4-mF2B5a {
+        background-color: transparent;
+        gap: 8.681330680847168px;
+        margin-bottom: -0.36px;
+        padding: 8.681330680847168px 12.153862953186035px;
+      }
+
+      .landing-page .projects-P8BGro {
+        letter-spacing: 0.55px;
+        margin-top: -0.87px;
+      }
+
+      .landing-page .frame-6-mF2B5a {
+        background-color: transparent;
+        gap: 8.681330680847168px;
+        margin-bottom: -0.36px;
+        margin-right: -12.21px;
+        padding: 8.681330680847168px 12.153862953186035px;
+      }
+
+      .landing-page .contact-l2vrgp {
+        letter-spacing: 0.55px;
+        margin-top: -0.87px;
+      }
+
+      .landing-page .group-38-CKiNgZ {
+        background-color: transparent;
+        height: 27px;
+        left: 603px;
+        position: absolute;
+        top: 180px;
+        width: 152px;
+      }
+
+      .landing-page .linked-in-negative-GyKm90 {
+        left: 128px;
+        top: 0px;
+      }
+
+      .landing-page .instagram-negative-GyKm90 {
+        left: 85px;
+        top: 0px;
+      }
+
+      .landing-page .twitter-negative-GyKm90 {
+        left: 43px;
+        top: 0px;
+      }
+
+      .landing-page .x2025-fndy-sptra-all-rights-reserved-inc-CKiNgZ {
+        background-color: transparent;
+        color: transparent;
+        font-family: var(--font-family-poppins);
+        font-size: var(--font-size-xs);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        left: 497px;
+        letter-spacing: 0.55px;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 325px;
+        width: auto;
+      }
+
+      .landing-page .span0-YhLUnz {
+        color: var(--white);
+        font-style: normal;
+        letter-spacing: 0.1px;
+      }
+
+      .landing-page .span1-YhLUnz {
+        color: #e86c0a;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.1px;
+      }
+
+      .landing-page .span2-YhLUnz {
+        color: var(--white);
+        font-style: normal;
+        letter-spacing: 0.1px;
+      }
+
+      .landing-page .web-designs-0MUxxh {
+        height: 398px;
+        left: 558px;
+        top: 3082px;
+        width: 290px;
+      }
+
+      .landing-page .about-me {
+        background-color: transparent;
+        position: relative;
+      }
+
+      .landing-page .contact {
+        background-color: transparent;
+        line-height: normal;
+        position: relative;
+        text-align: left;
+        width: fit-content;
+      }
+
+      .landing-page .ellipse-4 {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .landing-page .ellipse-9 {
+        background-color: var(--cararra);
+        border: 3px solid;
+        border-color: var(--blaze-orange);
+        border-radius: 16px;
+        box-shadow: 0px 4px 7px #00000033;
+        height: 32px;
+        position: absolute;
+        width: 32px;
+      }
+
+      .landing-page .facebook-negative {
+        background-color: transparent;
+        height: 27px;
+        left: 0px;
+        position: absolute;
+        top: 0px;
+        width: 24px;
+      }
+
+      .landing-page .frame-1 {
+        align-items: flex-start;
+        display: inline-flex;
+        flex: 0 0 auto;
+        position: relative;
+      }
+
+      .landing-page .frame-2 {
+        align-items: flex-start;
+        display: inline-flex;
+        flex: 0 0 auto;
+        position: relative;
+      }
+
+      .landing-page .frame-23 {
+        align-items: flex-start;
+        background-color: var(--black-haze);
+        border: 0.4000000059604645px solid;
+        border-color: var(--fuscous-gray);
+        border-radius: 12px;
+        display: inline-flex;
+        gap: 10px;
+        padding: 10px 20px;
+        position: absolute;
+      }
+
+      .landing-page .frame-4 {
+        align-items: flex-start;
+        display: inline-flex;
+        flex: 0 0 auto;
+        position: relative;
+      }
+
+      .landing-page .frame-6 {
+        align-items: flex-start;
+        display: inline-flex;
+        flex: 0 0 auto;
+        position: relative;
+      }
+
+      .landing-page .group-8 {
+        background-color: transparent;
+        height: 32px;
+        left: 0px;
+        position: absolute;
+        width: 753px;
+      }
+
+      .landing-page .home {
+        background-color: transparent;
+        line-height: normal;
+        position: relative;
+        text-align: left;
+        width: fit-content;
+      }
+
+      .landing-page .instagram-negative {
+        background-color: transparent;
+        height: 27px;
+        position: absolute;
+        width: 24px;
+      }
+
+      .landing-page .kemampuan-untuk-mema {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        width: 290px;
+      }
+
+      .landing-page .linked-in-negative {
+        background-color: transparent;
+        height: 27px;
+        position: absolute;
+        width: 24px;
+      }
+
+      .landing-page .mask-group {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .landing-page .pemahaman-dasar-pemrograman {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        left: 0px;
+        line-height: normal;
+        position: absolute;
+        width: auto;
+      }
+
+      .landing-page .pemahaman-dasar-pemrograman-web {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        width: auto;
+      }
+
+      .landing-page .penggunaan-tools {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        width: auto;
+      }
+
+      .landing-page .projects {
+        background-color: transparent;
+        line-height: normal;
+        position: relative;
+        text-align: left;
+        width: fit-content;
+      }
+
+      .landing-page .rectangle-20 {
+        border-radius: 14px;
+        height: 419px;
+        position: absolute;
+        top: 0px;
+        width: 330px;
+      }
+
+      .landing-page .rectangle-5 {
+        background-color: var(--cararra);
+        border-radius: 6px;
+        height: 12px;
+        left: 0px;
+        position: absolute;
+        width: 753px;
+      }
+
+      .landing-page .rectangle-6 {
+        background-color: var(--blaze-orange);
+        border-radius: 6px;
+        height: 12px;
+        left: 0px;
+        position: absolute;
+      }
+
+      .landing-page .services {
+        background-color: transparent;
+        position: relative;
+      }
+
+      .landing-page .struktur-data-dan-algoritma {
+        background-color: transparent;
+        color: var(--black);
+        font-style: normal;
+        font-weight: 600;
+        height: auto;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        width: auto;
+      }
+
+      .landing-page .twitter-negative {
+        background-color: transparent;
+        height: 27px;
+        position: absolute;
+        width: 24px;
+      }
+
+      .landing-page .vector {
+        background-color: transparent;
+        position: absolute;
+      }
+
+      .landing-page .web-administrasi {
+        background-color: transparent;
+        font-style: normal;
+        line-height: normal;
+      }
+
+      .landing-page .web-design {
+        background-color: transparent;
+        color: var(--blaze-orange);
+        font-style: normal;
+        font-weight: 400;
+        height: auto;
+        line-height: normal;
+        position: absolute;
+        text-align: left;
+        top: 526px;
+        width: auto;
+      }
+
+      .landing-page .web-designs {
+        background-color: transparent;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body style="margin: 0; background: #ffffff">
+    <input type="hidden" id="anPageName" name="page" value="landing-page" />
+    <form class="landing-page screen" data-id="1210:2676" name="form1" action="form1" method="post">
+      <input type="text" name="trapit" value="" style="display: none" />
+      <div class="about-me-0MUxxh about-me" data-id="1210:2677">
+        <div class="group-13-yukGTq" data-id="1210:2678">
+          <div class="frame-3-XUIqv5" data-id="1210:2719">
+            <div class="frame-1-RZQuVU frame-1" data-id="1210:2720"><div class="home-w01UMm home nav-bar-text-21" data-id="1210:2721">Home</div></div>
+            <div class="frame-2-RZQuVU frame-2" data-id="1210:2722"><div class="about-me-5MDUJU about-me nav-bar-text-21" data-id="1210:2723">About Me</div></div>
+            <div class="frame-3-RZQuVU" data-id="1210:2724"><div class="services-I38gq7 services nav-bar-text-21" data-id="1210:2725">Services</div></div>
+            <div class="frame-4-RZQuVU frame-4" data-id="1210:2726"><div class="projects-L1XvDT projects nav-bar-text-21" data-id="1210:2727">Projects</div></div>
+            <div class="frame-6-RZQuVU frame-6" data-id="1210:2730"><div class="contact-SqPsL4 contact nav-bar-text-21" data-id="1210:2731">Contact</div></div>
+          </div>
+          <div class="group-3-XUIqv5" data-id="1210:2732">
+            <div class="rectangle-1-8pf0fs" data-id="1210:2733"></div>
+            <div class="contact-me-8pf0fs nav-bar-text-21" data-id="1210:2734">&nbsp;&nbsp;Contact Me</div>
+          </div>
+        </div>
+      </div>
+      <div class="frame-27-0MUxxh" data-id="1210:2960">
+        <div class="header-CBjmET" data-id="1210:2961">
+          <div class="group-6-7A88Cc" data-id="1210:2962">
+            <div class="group-5-CH45hr" data-id="1210:2963">
+              <div class="hi-i-am-j2UDMV small-heading-24" data-id="1210:2964">Hi I am</div>
+              <div class="fandy-muhammad-saputra-j2UDMV" data-id="1210:2965">Fandy Muhammad Saputra</div>
+              <div class="student-at-yogyakarta-j2UDMV" data-id="1210:2966">Student at Yogyakarta</div>
+              <div class="university-of-technology-j2UDMV" data-id="1210:2967">University of Technology</div>
+            </div>
+            <p class="saya-menempuh-pendid-CH45hr nav-bar-text-21" data-id="1210:2968">
+              Saya menempuh pendidikan program study S1 Informatika. Saat ini sedang menjalani pembelajaran semester 1. Antusias yang sangat tinggi terus menyertai untuk dapat terus mengembangkan skill yang dibutuhkan untuk menjadi seorang
+              programmer profesional. Kemampuan yang dimiliki saat ini masih basic, sehingga perlu usaha keras dan proses panjang untuk mencapai goal tersebut
+            </p>
+            <div class="group-2-CH45hr" data-id="1210:2969">
+              <img
+                class="ellipse-4-xxLoVa ellipse-4"
+                data-id="1210:2970"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677b70a0f29796bc7fd308a2/img/ellipse-4-1.svg"
+                alt="Ellipse 4"
+              /><img
+                class="mask-group-xxLoVa mask-group"
+                data-id="1210:2971"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/mask-group@2x.png"
+                alt="Mask group"
+              /><img
+                class="layer-0-copy-4-xxLoVa"
+                data-id="1210:2974"
+                src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/layer-0-copy-4.png"
+                alt="Layer 0 copy 4"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="group-39-CBjmET" data-id="1210:2975">
+          <img
+            class="linked-in-negative-GCQvmx linked-in-negative"
+            data-id="1210:2976"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/linkedin---negative.svg"
+            alt="LinkedIn - Negative"
+          /><img
+            class="instagram-negative-GCQvmx instagram-negative"
+            data-id="1210:2977"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/instagram---negative-1.svg"
+            alt="Instagram - Negative"
+          /><img
+            class="twitter-negative-GCQvmx twitter-negative"
+            data-id="1210:2978"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/twitter---negative.svg"
+            alt="Twitter - Negative"
+          /><img
+            class="facebook-negative"
+            data-id="1210:2979"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/facebook---negative.svg"
+            alt="Facebook - Negative"
+          />
+        </div>
+      </div>
+      <div class="nav-bar-0MUxxh" data-id="1210:2735">
+        <div class="group-11-U4NVqU" data-id="1210:2736">
+          <div class="group-7-DxsQQQ" data-id="1210:2737">
+            <img
+              class="ellipse-4-XWgLsO ellipse-4"
+              data-id="1210:2738"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/ellipse-4-1.svg"
+              alt="Ellipse 4"
+            /><img
+              class="mask-group-XWgLsO mask-group"
+              data-id="1210:2739"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/mask-group-1.png"
+              alt="Mask group"
+            />
+          </div>
+          <p class="saya-adalah-mahasisw-DxsQQQ nav-bar-text-21" data-id="1210:2743">
+            Saya adalah mahasiswa dengan minat besar dalam pengembangan web dan teknologi informasi. Saat ini, saya sedang mempelajari dasar-dasar pemrograman menggunakan python, html, javascript serta memperluas pengetahuan saya di bidang
+            pengembangan web.
+          </p>
+          <h1 class="title-DxsQQQ h2-65" data-id="1210:2744">About Me</h1>
+          <div class="group-10-DxsQQQ" data-id="1210:2745">
+            <div class="group-9-omzMxC" data-id="1210:2746">
+              <div class="pemahaman-dasar-pemrograman-AFuhdn pemahaman-dasar-pemrograman small-heading-24" data-id="1210:2747">Pemahaman Dasar Pemrograman</div>
+              <div class="group-8-AFuhdn group-8" data-id="1210:2748">
+                <div class="rectangle-5-OWQsx7 rectangle-5" data-id="1210:2749"></div>
+                <div class="rectangle-6-OWQsx7 rectangle-6" data-id="1210:2750"></div>
+                <div class="ellipse-9-OWQsx7 ellipse-9" data-id="1210:2751"></div>
+              </div>
+            </div>
+            <div class="penggunaan-tools-omzMxC penggunaan-tools small-heading-24" data-id="1210:2752">Penggunaan Tools</div>
+            <div class="rectangle-5-omzMxC rectangle-5" data-id="1210:2753"></div>
+            <div class="rectangle-6-omzMxC rectangle-6" data-id="1210:2754"></div>
+            <div class="ellipse-9-omzMxC ellipse-9" data-id="1210:2755"></div>
+            <div class="struktur-data-dan-algoritma-omzMxC struktur-data-dan-algoritma small-heading-24" data-id="1210:2756">Struktur Data dan Algoritma</div>
+            <div class="rectangle-5-OWFLuI rectangle-5" data-id="1210:2757"></div>
+            <div class="rectangle-6-OWFLuI rectangle-6" data-id="1210:2758"></div>
+            <div class="ellipse-9-OWFLuI ellipse-9" data-id="1210:2759"></div>
+            <div class="pemahaman-dasar-pemrograman-web-omzMxC pemahaman-dasar-pemrograman-web small-heading-24" data-id="1210:2760">Pemahaman Dasar Pemrograman Web</div>
+            <div class="group-8-omzMxC group-8" data-id="1210:2761">
+              <div class="rectangle-5-zb7VLx rectangle-5" data-id="1210:2762"></div>
+              <div class="rectangle-6-zb7VLx rectangle-6" data-id="1210:2763"></div>
+              <div class="ellipse-9-zb7VLx ellipse-9" data-id="1210:2764"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="services-0MUxxh services" data-id="1210:2765">
+        <div class="group-22-2Ne45x" data-id="1210:2766">
+          <div class="group-14-Jeu3vn" data-id="1210:2767">
+            <p class="keterampilan-yang-sa-YidIon nav-bar-text-21" data-id="1210:2768">Keterampilan yang saya dapatkan dan kuasai selama <br />satu semester ini.</p>
+            <div class="skills-YidIon h2-65" data-id="1210:2769">Skills</div>
+          </div>
+          <div class="group-21-Jeu3vn" data-id="1210:2770">
+            <div class="group-20-nbuHYU" data-id="1210:2771">
+              <div class="rectangle-20-VR7ab6 rectangle-20" data-id="1210:2772"></div>
+              <div class="group-19-VR7ab6" data-id="1210:2773">
+                <p class="pemahaman-dasar-pemrograman-iE0OS0 pemahaman-dasar-pemrograman small-heading-24" data-id="1210:2774">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pemahaman Dasar <br />Pemrograman</p>
+                <p class="kemampuan-untuk-mema-iE0OS0 kemampuan-untuk-mema sub-p-19" data-id="1210:2775">
+                  Kemampuan untuk memahami konsep, prinsip, dan teknik fundamental yang menjadi landasan dalam menulis, membaca, dan memecahkan masalah menggunakan kode
+                </p>
+                <img
+                  class="vector-iE0OS0 vector"
+                  data-id="1210:2776"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-5.svg"
+                  alt="Vector"
+                /><img
+                  class="vector-KEtfcJ vector"
+                  data-id="1210:2777"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-6.svg"
+                  alt="Vector"
+                /><img
+                  class="vector-xwFdeX vector"
+                  data-id="1210:2778"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-7.svg"
+                  alt="Vector"
+                /><img
+                  class="vector-LNSnzW vector"
+                  data-id="1210:2779"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-8.svg"
+                  alt="Vector"
+                /><img
+                  class="vector-h2LxmK vector"
+                  data-id="1210:2780"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-9.svg"
+                  alt="Vector"
+                /><img
+                  class="vector-z7cOBb vector"
+                  data-id="1210:2781"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-10.svg"
+                  alt="Vector"
+                /><img
+                  class="vector-7v5eoS vector"
+                  data-id="1210:2782"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-11.svg"
+                  alt="Vector"
+                /><img
+                  class="vector-uiCOeb vector"
+                  data-id="1210:2783"
+                  src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+                  anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-12.svg"
+                  alt="Vector"
+                />
+              </div>
+            </div>
+            <div class="rectangle-20-nbuHYU rectangle-20" data-id="1210:2784"></div>
+            <div class="penggunaan-tools-nbuHYU penggunaan-tools small-heading-24" data-id="1210:2785">Penggunaan Tools</div>
+            <p class="kemampuan-untuk-mema-nbuHYU kemampuan-untuk-mema sub-p-19" data-id="1210:2786">Kemampuan untuk memahami, mengoperasikan, dan memanfaatkan alat-alat (tools) yang digunakan dalam proses pengembangan web.</p>
+            <div class="rectangle-20-mU1tkK rectangle-20" data-id="1210:2787"></div>
+            <div class="struktur-data-dan-algoritma-nbuHYU struktur-data-dan-algoritma small-heading-24" data-id="1210:2788">Struktur Data dan<br />Algoritma</div>
+            <p class="dua-konsep-penting-d-nbuHYU sub-p-19" data-id="1210:2789">Dua konsep penting dalam ilmu komputer yang berperan dalam pengorganisasian data dan pemecahan masalah secara efisien.</p>
+            <div class="rectangle-20-CIDUxd rectangle-20" data-id="1210:2790"></div>
+            <div class="pemahaman-dasar-pemrograman-web-nbuHYU pemahaman-dasar-pemrograman-web" data-id="1210:2791">Pemahaman Dasar <br />Pemrograman Web</div>
+            <p class="penguasaan-konsep-te-nbuHYU sub-p-19" data-id="1210:2792">Penguasaan konsep, teknologi, dan keterampilan dasar yang diperlukan untuk membuat dan mengelola halaman atau aplikasi web.</p>
+            <img
+              class="layer_1-nbuHYU"
+              data-id="1210:2793"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/layer-1.svg"
+              alt="Layer_1"
+            /><img
+              class="group-18-nbuHYU"
+              data-id="1210:2806"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/group-18@2x.png"
+              alt="Group 18"
+            /><img
+              class="vector-nbuHYU vector"
+              data-id="1210:2813"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector.svg"
+              alt="Vector"
+            /><img
+              class="vector-mU1tkK vector"
+              data-id="1210:2814"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-1.svg"
+              alt="Vector"
+            /><img
+              class="vector-CIDUxd vector"
+              data-id="1210:2815"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-2.svg"
+              alt="Vector"
+            /><img
+              class="vector-6W2zi8 vector"
+              data-id="1210:2816"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-3.svg"
+              alt="Vector"
+            /><img
+              class="vector-t3wqGs vector"
+              data-id="1210:2817"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/vector-4.svg"
+              alt="Vector"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="frame-21-0MUxxh" data-id="1210:2818">
+        <p class="projek-kecil-yang-su-3k9vQ0 nav-bar-text-21" data-id="1210:2819">Projek kecil yang sudah saya buat selama <br />mengikuti perkuliahan.</p>
+        <div class="my-projects-3k9vQ0 h2-65" data-id="1210:2820">My Projects</div>
+        <div class="group-28-3k9vQ0" data-id="1210:2821">
+          <div class="frame-23-Hwesv3 frame-23" data-id="1210:2828"><div class="apps-kalkulator-xL5dxn x24-r" data-id="1210:2829">Apps Kalkulator</div></div>
+          <div class="frame-18-Hwesv3" data-id="1210:2830"><div class="web-ecommerce-1c53aD x24-r" data-id="1210:2831">Web Ecommerce</div></div>
+          <div class="frame-19-Hwesv3" data-id="1210:2832"><div class="web-administrasi-mVcO2M web-administrasi x24-r" data-id="1210:2833">Web Administrasi</div></div>
+        </div>
+        <div class="frame-23-3k9vQ0 frame-23" data-id="1210:2836"><div class="all-TkYxM0 x24-r" data-id="1210:2837">All</div></div>
+        <div class="group-25-3k9vQ0" data-id="1210:2838">
+          <div class="group-24-0Kxpxm" data-id="1210:2839">
+            <div class="rectangle-24-TQ5Fxo" data-id="1210:2840"></div>
+            <img
+              class="web-designs-TQ5Fxo web-designs"
+              data-id="1210:2841"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/web-designs-2@2x.png"
+              alt="Web Designs"
+            /><img
+              class="web-designs-mtKUCT web-designs"
+              data-id="1210:2842"
+              src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+              anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/web-designs-3@2x.png"
+              alt="Web Designs"
+            />
+          </div>
+          <div class="app-desain-0Kxpxm sub-p-19" data-id="1210:2844">App Desain</div>
+          <div class="apps-kalkulator-sederhana-0Kxpxm sub-heading-24" data-id="1210:2845">Apps Kalkulator Sederhana</div>
+        </div>
+        <div class="group-26-3k9vQ0" data-id="1210:2846">
+          <div class="rectangle-27-hMPqQu" data-id="1210:2847"></div>
+          <div class="web-design-hMPqQu web-design sub-p-19" data-id="1210:2850">Web Design</div>
+          <div class="web-e-commerce-hMPqQu sub-heading-24" data-id="1210:2851">Web E-Commerce</div>
+        </div>
+        <div class="group-27-3k9vQ0" data-id="1210:2852">
+          <div class="rectangle-28-RCG3IO" data-id="1210:2853"></div>
+          <img
+            class="web-designs-RCG3IO web-designs"
+            data-id="1210:2854"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/web-designs-4@2x.png"
+            alt="Web Designs"
+          /><img
+            class="web-designs-qzAaVI web-designs"
+            data-id="1210:2855"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/web-designs-5@2x.png"
+            alt="Web Designs"
+          />
+          <div class="web-design-RCG3IO web-design sub-p-19" data-id="1210:2856">Web Design</div>
+          <div class="web-administrasi-RCG3IO web-administrasi sub-heading-24" data-id="1210:2857">Web Administrasi</div>
+        </div>
+        <img
+          class="web-designs-3k9vQ0 web-designs"
+          data-id="1210:2848"
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+          anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/web-designs-1@2x.png"
+          alt="Web Designs"
+        />
+      </div>
+      <div class="frame-25-0MUxxh" data-id="1210:2894">
+        <div class="group-36-O4ED4B" data-id="1210:2895">
+          <p class="jika-ada-yang-bisa-d-eDjDJC nav-bar-text-21" data-id="1210:2896">Jika ada yang bisa dibantu, silahkan hubungi <br />email dibawah.</p>
+          <div class="lets-design-together-eDjDJC h2-65" data-id="1210:2897">Lets Design Together</div>
+        </div>
+        <a href="javascript:SubmitForm('form1')"
+          ><img
+            class="group-37-O4ED4B smart-layers-pointers"
+            data-id="1210:2898"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/group-37.svg"
+            alt="Group 37"
+        /></a>
+      </div>
+      <div class="frame-26-0MUxxh" data-id="1210:2903">
+        <div class="rectangle-39-CKiNgZ" data-id="1210:2904"></div>
+        <div class="rectangle-40-CKiNgZ" data-id="1210:2905"></div>
+        <div class="frame-3-CKiNgZ" data-id="1210:2945">
+          <div class="frame-1-mF2B5a frame-1" data-id="1210:2946"><div class="home-AbciDU home poppins-normal-black-18-2px" data-id="1210:2947">Home</div></div>
+          <div class="frame-2-mF2B5a frame-2" data-id="1210:2948"><div class="about-me-l4HxUx about-me poppins-normal-black-18-2px" data-id="1210:2949">About Me</div></div>
+          <div class="frame-3-mF2B5a" data-id="1210:2950"><div class="services-CEMrLO services poppins-normal-black-18-2px" data-id="1210:2951">Services</div></div>
+          <div class="frame-4-mF2B5a frame-4" data-id="1210:2952"><div class="projects-P8BGro projects poppins-normal-black-18-2px" data-id="1210:2953">Projects</div></div>
+          <div class="frame-6-mF2B5a frame-6" data-id="1210:2956"><div class="contact-l2vrgp contact poppins-normal-black-18-2px" data-id="1210:2957">Contact</div></div>
+        </div>
+        <div class="group-38-CKiNgZ" data-id="1210:2958">
+          <img
+            class="linked-in-negative-GyKm90 linked-in-negative"
+            data-id="1210:1919"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/linkedin---negative-1.svg"
+            alt="LinkedIn - Negative"
+          /><img
+            class="instagram-negative-GyKm90 instagram-negative"
+            data-id="1210:1921"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/instagram---negative.svg"
+            alt="Instagram - Negative"
+          /><img
+            class="twitter-negative-GyKm90 twitter-negative"
+            data-id="1210:1925"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/twitter---negative-1.svg"
+            alt="Twitter - Negative"
+          /><img
+            class="facebook-negative"
+            data-id="1210:1927"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+            anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/facebook---negative-1.svg"
+            alt="Facebook - Negative"
+          />
+        </div>
+        <p class="x2025-fndy-sptra-all-rights-reserved-inc-CKiNgZ" data-id="1210:2959"><span class="span0-YhLUnz">© 2025 </span><span class="span1-YhLUnz">FndySptra </span><span class="span2-YhLUnz">All Rights Reserved , Inc.</span></p>
+      </div>
+      <img
+        class="web-designs-0MUxxh web-designs"
+        data-id="1210:2849"
+        src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
+        anima-src="https://cdn.animaapp.com/projects/677b6c09f29796bc7fd30897/releases/677e8212e5e4d7d730768151/img/web-designs@2x.png"
+        alt="Web Designs"
+      />
+    </form>
+    <script src="launchpad-js/launchpad-banner.js" async></script>
+    <script defer src="https://animaapp.s3.amazonaws.com/static/restart-btn.min.js"></script>
+    <script>
+      /* Copyright (c) 2016 Tobias Buschor https://goo.gl/gl0mbf | MIT License https://goo.gl/HgajeK */
+
+      if (!HTMLFormElement.prototype.reportValidity) {
+        HTMLFormElement.prototype.reportValidity = function () {
+          if (this.checkValidity()) return true;
+          var btn = document.createElement("button");
+          this.appendChild(btn);
+          btn.click();
+          this.removeChild(btn);
+          return false;
+        };
+      }
+
+      function SubmitForm(form_name) {
+        var form = document.getElementsByName(form_name)[0];
+        if (form.reportValidity()) {
+          form.submit();
+          if (window.submitted) window.submitted();
+        }
+      }
+    </script>
+  </body>
+</html>
